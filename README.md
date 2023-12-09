@@ -1,4 +1,4 @@
-# EffiPoxy
+# EffiProxy
 [ZH-cn](README_ZH-cn.md) | [EN](README.md)
 
 
