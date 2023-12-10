@@ -94,7 +94,7 @@ forge test -vv | grep 'deploy'
 
 We can see that the Asm version reduces gas by more than 15% at deployment time compared to the Yul version.
 
-
+note: Compared to the Yul version, the Asm version also reduces gas cost during call, but the reduction is very slight (-20 gas per call), so we will not list it here.
 
 ## Usage
 
