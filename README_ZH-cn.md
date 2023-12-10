@@ -90,6 +90,8 @@ forge test -vv | grep 'deploy'
 
 我们可以看到，与 Yul 版本相比，Asm 版本在部署时降低了超过 15% 的燃气。
 
+另外，与 Yul 版本相比，Asm 版本在调用时也会降低 gas 消耗，但因为降低的非常少 ( -20 gas / per call)，所以我们不会在这里列出。
+
 
 
 ## 使用
