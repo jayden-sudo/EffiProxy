@@ -13,17 +13,17 @@ EffiProxy 是一个 `EIP-1967` 标准的燃气优化实现。
 
 
 ## 关键特性
- - ✨**燃气效率**：与 Yul 版本相比，EffiProxy 降低了超过 12k 的部署成本，达到了 15% 的降低。
+ - ✨**燃气效率**：与 Yul 版本相比，EffiProxy 降低了超过 13k 的部署成本，达到了 15% 的降低。
 
    注意：编写难以阅读的代码通常不是一个好习惯。但是，对于像代理这样的合约，它们具有固定的逻辑并且本质上代码极其简洁，通过编写低级代码确实可以提高燃气效率，而不会对任何其他组件产生不良影响。
    
    
    
-   EffiProxy 的 [opcode](src/EffiProxy.asm) 如下：```7311111111111111111111111111111111111111117f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc55604280380380825f395ff37f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc5473ffffffffffffffffffffffffffffffffffffffff16365f5f375f5f365f845af43d5f5f3e58600801573d5ffd5b3d5ff3```
+   EffiProxy 的 [opcode](src/EffiProxy_v2.asm) 如下：```60518060225f395f73111111111111111111111111111111111111111160165155f373ffffffffffffffffffffffffffffffffffffffff7f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc5416365f5f375f5f365f845af43d5f5f3e604d573d5ffd5b3d5ff3```
    
    
    
-   关于以上 opcode 的解释，请见 [EffiProxy.asm](src/EffiProxy.asm)。
+   关于以上 opcode 的解释，请见 [EffiProxy_v2.asm](src/EffiProxy_v2.asm)。
    
    
    
@@ -86,7 +86,7 @@ forge test -vv | grep 'deploy'
 | 名称                                            | 燃气       |
 | ----------------------------------------------- | --------- |
 | Yul 版本 [[代码]](src/YulProxy.sol)             | 83754 燃气 |
-| asm 版本 [[代码]](src/EffiProxy.asm)            | 70995 燃气 |
+| asm 版本 [[代码]](src/EffiProxy_v2.asm)            | 70570 燃气 |
 
 我们可以看到，与 Yul 版本相比，Asm 版本在部署时降低了超过 15% 的燃气。
 

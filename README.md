@@ -15,7 +15,7 @@ In the realm of upgradable contracts, especially for contract wallets, the gas e
 
 
 ## Key Features
- - ✨**Gas Efficiency**: Compared to Yul versions, EffiProxy reduces deployment cost by over 12k gas, achieving a 15% reduction.
+ - ✨**Gas Efficiency**: Compared to Yul versions, EffiProxy reduces deployment cost by over 13k gas, achieving a 15% reduction.
 
    
 
@@ -23,11 +23,11 @@ In the realm of upgradable contracts, especially for contract wallets, the gas e
    
    
    
-   The [opcode](src/EffiProxy.asm) for EffiProxy is as follows: ```7311111111111111111111111111111111111111117f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc55604280380380825f395ff37f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc5473ffffffffffffffffffffffffffffffffffffffff16365f5f375f5f365f845af43d5f5f3e58600801573d5ffd5b3d5ff3```
+   The [opcode](src/EffiProxy_v2.asm) for EffiProxy is as follows: ```60518060225f395f73111111111111111111111111111111111111111160165155f373ffffffffffffffffffffffffffffffffffffffff7f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc5416365f5f375f5f365f845af43d5f5f3e604d573d5ffd5b3d5ff3```
    
    
    
-   For an explanation of the above opcode, please see [EffiProxy.asm](src/EffiProxy.asm).
+   For an explanation of the above opcode, please see [EffiProxy_v2.asm](src/EffiProxy_v2.asm).
    
    
    
@@ -90,7 +90,7 @@ forge test -vv | grep 'deploy'
 | Name                                            | GAS       |
 | ----------------------------------------------- | --------- |
 | Yul version [[code]](src/YulProxy.sol)          | 83754 gas |
-| asm version [[code]](src/EffiProxy.asm) | 70995 gas |
+| asm version [[code]](src/EffiProxy_v2.asm) | 70570 gas |
 
 We can see that the Asm version reduces gas by more than 15% at deployment time compared to the Yul version.
 
